@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Moon Fairy ওরফে My Januuu 🫀 🌙🧚‍♀️</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f051d;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Floating Emojis Background */
+    .emoji-bg {
+      position: fixed;
+      bottom: -50px;
+      font-size: 24px;
+      user-select: none;
+      pointer-events: none;
+      animation: floatEmoji 6s linear infinite;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    @keyframes floatEmoji {
+      0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 0.8; }
+      100% { transform: translateY(-115vh) scale(1.2) rotate(360deg); opacity: 0; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 25px 20px;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    h1 { color: #ff758c; font-size: 26px; margin-bottom: 8px; font-weight: bold; }
+    h2 { color: #ffb8c6; font-size: 20px; margin-bottom: 12px; }
+    p { color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+
+    .btn {
+      background: linear-gradient(45deg, #ff758c, #ff7eb3);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .btn:active { transform: scale(0.96); }
+    .hidden { display: none !important; }
+
+    .music-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      z-index: 100;
+    }
+
+    /* Fixed Arrow & Heart Hit Animation */
+    .arrow-heart-container {
+      position: relative;
+      width: 200px;
+      height: 140px;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-heart {
+      font-size: 75px;
+      position: relative;
+      z-index: 2;
+      animation: heartBeating 1.2s infinite alternate;
+    }
+
+    .flying-arrow {
+      position: absolute;
+      font-size: 45px;
+      z-index: 3;
+      animation: arrowHit 2.5s infinite cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes arrowHit {
+      0% {
+        transform: translate(-120px, -60px) rotate(35deg);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      60% {
+        transform: translate(0px, 0px) rotate(35deg);
+        opacity: 1;
+      }
+      65% {
+        transform: translate(5px, 5px) rotate(35deg) scale(1.2);
+      }
+      100% {
+        transform: translate(120px, 60px) rotate(35deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes heartBeating {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      60% { transform: scale(1.25) rotate(-5deg); filter: drop-shadow(0 0 15px #ff758c); }
+      70% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Enhanced Cake & Candle CSS Animation */
+    .cake-container {
+      position: relative;
+      width: 140px;
+      height: 130px;
+      margin: 15px auto;
+      animation: popUpCake 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+    }
+
+    @keyframes popUpCake {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .cake-base {
+      width: 130px;
+      height: 45px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      border-radius: 12px 12px 8px 8px;
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .cake-middle {
+      width: 100px;
+      height: 35px;
+      background: linear-gradient(to right, #ff9a9e, #fecfef);
+      border-radius: 10px 10px 0 0;
+      position: absolute;
+      bottom: 45px;
+      left: 20px;
+    }
+
+    .cake-top {
+      width: 70px;
+      height: 25px;
+      background: #ffffff;
+      border-radius: 8px 8px 0 0;
+      position: absolute;
+      bottom: 80px;
+      left: 35px;
+    }
+
+    .candle-stick {
+      width: 8px;
+      height: 22px;
+      background: repeating-linear-gradient(45deg, #ffd166, #ffd166 4px, #ff9f1c 4px, #ff9f1c 8px);
+      position: absolute;
+      bottom: 105px;
+      left: 66px;
+      border-radius: 2px;
+    }
+
+    .candle-flame {
+      width: 12px;
+      height: 18px;
+      background: #ff9f1c;
+      border-radius: 50% 50% 20% 20%;
+      position: absolute;
+      bottom: 127px;
+      left: 64px;
+      box-shadow: 0 0 10px #ff9f1c, 0 0 20px #ff758c;
+      animation: flameFlicker 0.4s infinite alternate;
+    }
+
+    @keyframes flameFlicker {
+      0% { transform: scale(0.9) rotate(-2deg); }
+      100% { transform: scale(1.15) rotate(2deg); box-shadow: 0 0 15px #ff9f1c, 0 0 25px #ff758c; }
+    }
+
+    /* Balloons */
+    .balloons-flex {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .balloon-item {
+      width: 48px;
+      height: 62px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      cursor: pointer;
+      position: relative;
+      animation: floatB 3s infinite ease-in-out alternate;
+    }
+    .b-1 { background: #ff758c; animation-delay: 0s; }
+    .b-2 { background: #4cc9f0; animation-delay: 0.5s; }
+    .b-3 { background: #f72585; animation-delay: 1s; }
+    .b-4 { background: #7209b7; animation-delay: 1.5s; }
+
+    @keyframes floatB {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .popped-balloon {
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .reason-box {
+      background: rgba(255, 255, 255, 0.12);
+      border-left: 4px solid #ff758c;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: left;
+      font-size: 13px;
+      border-radius: 8px;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      margin: 10px 0;
+    }
+
+    .letter-bg {
+      background: rgba(0,0,0,0.25);
+      border: 1px dashed #ff758c;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Emojis Background Container -->
+  <div id="emojiContainer"></div>
+
+  <audio id="bgMusic" loop src="song.mp3"></audio>
+  <button class="music-btn" onclick="toggleMusic()">🎵 Music Play/Pause</button>
+
+  <!-- Step 1: Arrow Hits Heart Animation -->
+  <div id="step1" class="card">
+    <div class="arrow-heart-container">
+      <div class="flying-arrow">💘</div>
+      <div class="main-heart">💖</div>
+    </div>
+    <h1>Make a Wish...</h1>
+    <h2>Happy Birthday</h2>
+    <p>আজকের বিশেষ দিনে ভালোবাসা ভরা শুভেচ্ছা...</p>
+    <button class="btn" onclick="nextStep(2); playMusic();">Start Birthday Wish ✨</button>
+  </div>
+
+  <!-- Step 2: Name Wish -->
+  <div id="step2" class="card hidden">
+    <div style="font-size: 50px; margin-bottom: 10px;">🌸💖</div>
+    <p style="font-size: 12px; color: #ffb8c6; margin-bottom: 5px;">it's officially your day</p>
+    <h1>Happy Birthday, Marufa! 🌙</h1>
+    <p>আমার জীবনের সবচেয়ে সুন্দর মানুষটিকে জন্মদিনের অনেক অনেক শুভেচ্ছা। ✨</p>
+    <button class="btn" onclick="nextStep(3)">Bake the Cake 🎂</button>
+  </div>
+
+  <!-- Step 3: Animated Cake Scene -->
+  <div id="step3" class="card hidden">
+    <p style="font-size: 13px; color: #ffb8c6;">First things first 🎂</p>
+    
+    <div class="cake-container">
+      <div class="candle-flame"></div>
+      <div class="candle-stick"></div>
+      <div class="cake-top"></div>
+      <div class="cake-middle"></div>
+      <div class="cake-base"></div>
+    </div>
+
+    <h2>Happy Birthday, Marufa!</h2>
+    <p style="font-size: 12px;">Make a wish and pop the balloons below 🕯️</p>
+    <button class="btn" onclick="nextStep(4)">Pop the Balloons 🎈</button>
+  </div>
+
+  <!-- Step 4: Balloon Pop -->
+  <div id="step4" class="card hidden">
+    <h2>Pop the balloons 🎈</h2>
+    <p style="font-size: 12px;">বেলুনগুলোতে ক্লিক করে ভালোবাসার বার্তাগুলো খোলো:</p>
+
+    <div class="balloons-flex">
+      <div class="balloon-item b-1" onclick="popB(this, 'r1')"></div>
+      <div class="balloon-item b-2" onclick="popB(this, 'r2')"></div>
+      <div class="balloon-item b-3" onclick="popB(this, 'r3')"></div>
+      <div class="balloon-item b-4" onclick="popB(this, 'r4')"></div>
+    </div>
+
+    <div id="reasonsArea">
+      <div id="r1" class="reason-box hidden"><b>REASON NO. 1 ❤️</b><br>তোমার মিষ্টি হাসি আমার প্রতিটা দিন উজ্জ্বল করে তোলে।</div>
+      <div id="r2" class="reason-box hidden"><b>REASON NO. 2 💕</b><br>তোমার চোখের ওই মায়ায় আটকে থাকা আমার সবচেয়ে প্রিয় অনুভূতি।</div>
+      <div id="r3" class="reason-box hidden"><b>REASON NO. 3 💖</b><br>তুমি আমার জীবনে আসার পর থেকে সবকিছু অনেক সুন্দর হয়ে গেছে।</div>
+      <div id="r4" class="reason-box hidden"><b>REASON NO. 4 🌙</b><br>তুমি শুধু মারুফা নও, তুমি আমার মুন ফাইরি।</div>
+    </div>
+
+    <button class="btn" onclick="nextStep(5)">A Walk Down Memory Lane 📸</button>
+  </div>
+
+  <!-- Step 5: Memory Gallery -->
+  <div id="step5" class="card hidden">
+    <h2>A walk down memory lane 📸</h2>
+    <img id="galleryImg" class="gallery-img" src="marufa1.jpg" alt="Memory">
+    <p id="galleryText" style="font-size: 13px; font-weight: bold; color: #ffb8c6;">মেমোরি ১/৬</p>
+    
+    <div style="display: flex; gap: 10px;">
+      <button class="btn" style="background: rgba(255,255,255,0.2);" onclick="prevP()">◀ Prev</button>
+      <button class="btn" onclick="nextP()">Next ▶</button>
+    </div>
+
+    <button class="btn" style="margin-top: 12px;" onclick="nextStep(6)">Read Love Letter 💌</button>
+  </div>
+
+  <!-- Step 6: Love Letter -->
+  <div id="step6" class="card hidden">
+    <h2>Dear Marufa, 💌</h2>
+    <div class="letter-bg">
+      <p>শুভ জন্মদিন, আমার মুন ফাইরি! ❤️<br><br>
+      হয়তো সবসময় বলা হয় না, কিন্তু তুমি আমার জীবনের সবচেয়ে সুন্দর উপহার। তোমার মিষ্টি রাগ, হাসি, অভিমান— সবকিছুই আমার খুব প্রিয়।<br><br>
+      তুমি যেভাবে আছো ঠিক সেভাবেই থেকো। সবসময় অনেক হাসিখুশি থেকো।<br><br>
+      <b>With all my love ❤️</b></p>
+    </div>
+    <button class="btn" onclick="nextStep(7)">Final Wish 🎉</button>
+  </div>
+
+  <!-- Step 7: Final -->
+  <div id="step7" class="card hidden">
+    <div style="font-size: 50px; margin-bottom: 10px;">🎉🎂</div>
+    <h1>HAPPY BIRTHDAY</h1>
+    <h2>Marufa! 💖</h2>
+    <p>Made with love, just for you. ✨</p>
+    <button class="btn" onclick="nextStep(1)">Replay Preview 🔄</button>
+  </div>
+
+  <script>
+    // Floating Emojis Logic
+    const emojis = ['❤️', '💖', '💕', '🌸', '✨', '💌', '🌙', '🧚‍♀️', '🫀'];
+    const emojiContainer = document.getElementById('emojiContainer');
+
+    function createEmoji() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji-bg');
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      emojiContainer.appendChild(emoji);
+
+      setTimeout(() => {
+        emoji.remove();
+      }, 6000);
+    }
+
+    setInterval(createEmoji, 350);
+
+    // Audio & Navigation
+    const music = document.getElementById('bgMusic');
+
+    function playMusic() {
+      music.play().catch(e => console.log('Audio playback prevented'));
+    }
+
+    function toggleMusic() {
+      if (music.paused) music.play();
+      else music.pause();
+    }
+
+    function nextStep(step) {
+      for (let i = 1; i <= 7; i++) {
+        document.getElementById('step' + i).classList.add('hidden');
+      }
+      document.getElementById('step' + step).classList.remove('hidden');
+    }
+
+    function popB(element, rId) {
+      element.classList.add('popped-balloon');
+      document.getElementById(rId).classList.remove('hidden');
+    }
+
+    // Gallery Logic
+    const photos = [
+      { src: "marufa1.jpg", text: "স্পেশাল মুহূর্ত ডিসেম্বরের গায়ে হলুদের রাত 🌸" },
+      { src: "marufa2.jpg", text: "চাঁদের মতো মায়াবী মুন ফাইরি 🌙" },
+      { src: "marufa3.jpg", text: "প্রিয় মিষ্টি হাসি তোমার মায়াবী চোখের প্রেমে পড়া ✨" },
+      { src: "marufa4.jpg", text: "জীবনের সেরা অনুভূতি তোমায় বারবার দেখা 💖" },
+      { src: "marufa5.jpg", text: "মিষ্টি অভিমান ❤️" },
+      { src: "marufa6.jpg", text: "তোমার সুন্দর স্বপ্নগুলো সত্যি হোক 🎂" }
+    ];
+
+    let pIndex = 0;
+
+    function updateP() {
+      document.getElementById('galleryImg').src = photos[pIndex].src;
+      document.getElementById('galleryText').innerText = `মেমোরি ${pIndex + 1}/6: ${photos[pIndex].text}`;
+    }
+
+    function nextP() {
+      if (pIndex < photos.length - 1) {
+        pIndex++;
+        updateP();
+      }
+    }
+
+    function prevP() {
+      if (pIndex > 0) {
+        pIndex--;
+        updateP();
+      }
+    }
+  </script>
+
+</body>
+</html>
